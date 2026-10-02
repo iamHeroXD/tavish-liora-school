@@ -57,6 +57,8 @@ const config: Config = {
         },
       },
       fontFamily: {
+        fredoka: ["var(--font-fredoka)", "cursive", "sans-serif"],
+        nunito: ["var(--font-nunito)", "sans-serif"],
         display: ["var(--font-fraunces)", "serif"],
         sans: ["var(--font-jakarta)", "sans-serif"],
         script: ["var(--font-caveat)", "cursive"],

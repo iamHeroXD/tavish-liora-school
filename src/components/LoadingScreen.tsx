@@ -5,27 +5,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 export default function LoadingScreen() {
-  const [isVisible, setIsVisible] = useState(true);
-  const [hasVisited, setHasVisited] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Check if user has already visited in this session
     const visited = sessionStorage.getItem("tlcs_visited");
-    if (visited) {
-      setHasVisited(true);
-      setIsVisible(false);
-      return;
+    if (!visited) {
+      setIsVisible(true);
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+        sessionStorage.setItem("tlcs_visited", "true");
+      }, 700);
+      return () => clearTimeout(timer);
     }
-
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-      sessionStorage.setItem("tlcs_visited", "true");
-    }, 1100);
-
-    return () => clearTimeout(timer);
   }, []);
 
-  if (hasVisited) return null;
+  if (!isVisible) return null;
 
   return (
     <AnimatePresence>

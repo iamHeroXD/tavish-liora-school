@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  --font-fredoka: 'Fredoka', cursive, sans-serif;
+  --font-nunito: 'Nunito', sans-serif;
   --font-fraunces: 'Fraunces', Georgia, serif;
   --font-jakarta: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-caveat: 'Caveat', cursive;
   
   --brand-green: #2E9B50;
   --brand-blue: #0878B8;
-  --brand-ivory: #F8F6F0;
-  --brand-warm-white: #FDFCF9;
+  --brand-yellow: #F59E0B;
+  --brand-orange: #F97316;
+  --brand-cream: #FFFDF8;
+  --brand-ivory: #FDF9EE;
   --brand-charcoal: #1F2823;
 }
 

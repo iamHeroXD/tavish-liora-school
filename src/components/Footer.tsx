@@ -28,10 +28,10 @@ export default function Footer() {
                 />
               </div>
               <div>
-                <h2 className="font-display font-bold text-xl sm:text-2xl text-white tracking-tight">
+                <h2 className="font-fredoka font-bold text-2xl text-white tracking-wide">
                   Tavish Liora
                 </h2>
-                <p className="text-xs uppercase tracking-[0.2em] text-brand-green-300 font-medium">
+                <p className="text-xs uppercase font-fredoka tracking-widest text-amber-300 font-bold">
                   Central School · Melamcode, Nemom
                 </p>
               </div>

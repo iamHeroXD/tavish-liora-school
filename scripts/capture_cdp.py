@@ -67,13 +67,11 @@ async def capture_page(url, output_path, width=1440, height=900, device_scale=1,
                     "deviceScaleFactor": device_scale,
                     "mobile": width < 600,
                 })
-                # Add script to evaluate on new document to skip loading screen for instant captures
                 await send_cmd(page_ws, 4, "Page.addScriptToEvaluateOnNewDocument", {
                     "source": "sessionStorage.setItem('tlcs_visited', 'true');"
                 })
                 await send_cmd(page_ws, 5, "Page.navigate", {"url": url})
                 
-                # Wait for layout & image rendering
                 await asyncio.sleep(2.0)
 
                 if scroll_y > 0:
@@ -97,5 +95,7 @@ async def capture_page(url, output_path, width=1440, height=900, device_scale=1,
 
 if __name__ == "__main__":
     os.makedirs("public/screenshots", exist_ok=True)
-    asyncio.run(capture_page("http://localhost:3000", "public/screenshots/desktop-hero-full.png", 1440, 950))
-    asyncio.run(capture_page("http://localhost:3000", "public/screenshots/desktop-learning.png", 1440, 950, scroll_y=1700))
+    asyncio.run(capture_page("http://localhost:3000", "public/screenshots/new-hero-desktop.png", 1440, 950))
+    asyncio.run(capture_page("http://localhost:3000", "public/screenshots/new-about-work.png", 1440, 950, scroll_y=750))
+    asyncio.run(capture_page("http://localhost:3000", "public/screenshots/new-classes.png", 1440, 950, scroll_y=1550))
+    asyncio.run(capture_page("http://localhost:3000", "public/screenshots/new-mobile-hero.png", 390, 844))

@@ -1,5 +1,6 @@
 import HeroSection from "@/components/home/HeroSection";
 import EssenceSection from "@/components/home/EssenceSection";
+import ClassesSection from "@/components/home/ClassesSection";
 import StoryTimeline from "@/components/home/StoryTimeline";
 import LearningWorld from "@/components/home/LearningWorld";
 import DayTimeline from "@/components/home/DayTimeline";
@@ -14,8 +15,11 @@ export default function HomePage() {
       {/* 02. Hero Experience */}
       <HeroSection />
 
-      {/* 03. "A School That Feels Like..." Essence & Editorial Story */}
+      {/* 03. "Learn About Our Work and Cultural Activities" Essence & Story */}
       <EssenceSection />
+
+      {/* 04. Popular Classes & Activities */}
+      <ClassesSection />
 
       {/* 04. The School Story Timeline */}
       <StoryTimeline />
