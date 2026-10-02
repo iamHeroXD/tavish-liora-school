@@ -13,14 +13,14 @@ export default function ContactMapSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green-100 text-brand-green-900 text-xs font-semibold tracking-wider uppercase">
-            <MapPin className="w-3.5 h-3.5 text-brand-green-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-fredoka font-semibold tracking-wider uppercase border border-emerald-200">
+            <MapPin className="w-3.5 h-3.5 text-emerald-600" />
             <span>VISIT OUR CAMPUS</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-neutral-charcoal tracking-tight">
-            Come say hello.
+          <h2 className="font-fredoka text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-neutral-charcoal tracking-tight">
+            Come say <span className="text-amber-500">hello</span> to our team.
           </h2>
-          <p className="text-brand-neutral-slate text-base sm:text-lg">
+          <p className="text-brand-neutral-slate text-base sm:text-lg font-nunito leading-relaxed">
             We love welcoming parents and children to walk our garden pathways and experience the calm, joyful energy of our school in person.
           </p>
         </div>
@@ -31,15 +31,15 @@ export default function ContactMapSection() {
           <div className="lg:col-span-5 flex flex-col justify-between gap-6">
             <div className="space-y-4">
               {/* Address Card */}
-              <div className="p-6 rounded-3xl bg-white border border-brand-neutral-border shadow-soft space-y-2">
-                <div className="flex items-center gap-2 text-xs font-semibold text-brand-green-700 uppercase tracking-wider">
-                  <MapPin className="w-4 h-4 text-brand-green-600" />
+              <div className="p-6 rounded-[2rem] bg-white border border-stone-200/80 shadow-soft space-y-2">
+                <div className="flex items-center gap-2 text-xs font-fredoka font-bold text-emerald-700 uppercase tracking-wider">
+                  <MapPin className="w-4 h-4 text-emerald-600" />
                   <span>Campus Location</span>
                 </div>
-                <h3 className="font-display font-bold text-lg text-brand-neutral-charcoal">
+                <h3 className="font-fredoka font-bold text-lg text-brand-neutral-charcoal">
                   Tavish Liora Central School
                 </h3>
-                <p className="text-sm text-brand-neutral-graphite leading-relaxed">
+                <p className="text-sm text-brand-neutral-graphite font-nunito leading-relaxed">
                   {schoolContact.location.fullAddress}
                 </p>
                 <div className="pt-2">
@@ -47,7 +47,7 @@ export default function ContactMapSection() {
                     href={directionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-green-700 hover:text-brand-green-900 underline underline-offset-4"
+                    className="inline-flex items-center gap-1.5 text-xs font-fredoka font-bold text-emerald-700 hover:text-emerald-900 underline underline-offset-4"
                   >
                     <Navigation className="w-3.5 h-3.5" />
                     <span>Get Directions on Google Maps</span>
@@ -56,22 +56,22 @@ export default function ContactMapSection() {
               </div>
 
               {/* Phone Card */}
-              <div className="p-6 rounded-3xl bg-white border border-brand-neutral-border shadow-soft flex items-center justify-between gap-4">
+              <div className="p-6 rounded-[2rem] bg-white border border-stone-200/80 shadow-soft flex items-center justify-between gap-4">
                 <div className="space-y-1">
-                  <div className="flex items-center gap-2 text-xs font-semibold text-brand-blue-700 uppercase tracking-wider">
-                    <Phone className="w-4 h-4 text-brand-blue-600" />
-                    <span>Admissions & General Enquiries</span>
+                  <div className="flex items-center gap-2 text-xs font-fredoka font-bold text-sky-700 uppercase tracking-wider">
+                    <Phone className="w-4 h-4 text-sky-600" />
+                    <span>Admissions Helpline</span>
                   </div>
-                  <p className="font-display font-bold text-xl text-brand-neutral-charcoal">
+                  <p className="font-fredoka font-bold text-xl text-brand-neutral-charcoal">
                     {schoolContact.contact.phone}
                   </p>
-                  <p className="text-xs text-brand-neutral-slate">
+                  <p className="text-xs text-brand-neutral-slate font-nunito">
                     Office open: {schoolContact.contact.officeDays} ({schoolContact.contact.hours})
                   </p>
                 </div>
                 <a
                   href={`tel:${schoolContact.contact.phone.replace(/\s+/g, "")}`}
-                  className="px-4 py-2 rounded-full bg-brand-green-600 hover:bg-brand-green-700 text-white text-xs font-semibold shadow-sm transition-colors flex-shrink-0"
+                  className="px-5 py-2.5 rounded-full bg-amber-400 hover:bg-amber-500 text-amber-950 text-xs font-fredoka font-bold shadow-sm transition-colors flex-shrink-0"
                 >
                   Call Now
                 </a>

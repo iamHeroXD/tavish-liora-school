@@ -21,14 +21,14 @@ export default function ContactPage() {
       <section className="relative py-20 sm:py-28 bg-brand-neutral-ivory/60 border-b border-brand-neutral-border/60 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green-100 text-brand-green-900 text-xs font-semibold tracking-wider uppercase">
-              <MapPin className="w-3.5 h-3.5 text-brand-green-600" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-fredoka font-semibold tracking-wider uppercase border border-emerald-200">
+              <MapPin className="w-3.5 h-3.5 text-emerald-600" />
               <span>GET IN TOUCH</span>
             </div>
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-neutral-charcoal tracking-tight leading-[1.1]">
-              Come visit our campus in Melamcode.
+            <h1 className="font-fredoka text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-neutral-charcoal tracking-tight leading-[1.15]">
+              Come visit our campus in <span className="text-amber-500">Melamcode</span>.
             </h1>
-            <p className="text-brand-neutral-graphite text-base sm:text-xl leading-relaxed">
+            <p className="text-brand-neutral-graphite text-base sm:text-xl font-nunito leading-relaxed">
               We look forward to meeting your family. Reach out via phone, email, or schedule an informal morning tour of our classrooms.
             </p>
           </div>
@@ -42,19 +42,19 @@ export default function ContactPage() {
             {/* Contact Details (5 cols) */}
             <div className="lg:col-span-5 space-y-6">
               {/* Address */}
-              <div className="p-8 rounded-[2.5rem] bg-white border border-brand-neutral-border shadow-soft space-y-4">
-                <div className="flex items-center gap-2 text-xs font-semibold text-brand-green-700 uppercase tracking-wider">
-                  <MapPin className="w-4 h-4 text-brand-green-600" />
+              <div className="p-8 rounded-[2rem] bg-white border border-stone-200/80 shadow-soft space-y-4">
+                <div className="flex items-center gap-2 text-xs font-fredoka font-bold text-emerald-700 uppercase tracking-wider">
+                  <MapPin className="w-4 h-4 text-emerald-600" />
                   <span>Campus Address</span>
                 </div>
                 <div>
-                  <h2 className="font-display font-bold text-2xl text-brand-neutral-charcoal">
+                  <h2 className="font-fredoka font-bold text-2xl text-brand-neutral-charcoal">
                     Tavish Liora Central School
                   </h2>
-                  <p className="text-base text-brand-neutral-graphite mt-2 leading-relaxed">
+                  <p className="text-base text-brand-neutral-graphite font-nunito mt-2 leading-relaxed">
                     {schoolContact.location.fullAddress}
                   </p>
-                  <p className="text-xs text-brand-neutral-slate mt-1">
+                  <p className="text-xs text-brand-neutral-slate font-nunito mt-1">
                     Landmark: {schoolContact.location.landmarks}
                   </p>
                 </div>
@@ -63,7 +63,7 @@ export default function ContactPage() {
                     href={directionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-green-600 hover:bg-brand-green-700 text-white text-xs font-semibold shadow-sm transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-fredoka font-bold shadow-sm transition-colors"
                   >
                     <Navigation className="w-3.5 h-3.5" />
                     <span>Get Directions on Google Maps</span>
@@ -72,36 +72,36 @@ export default function ContactPage() {
               </div>
 
               {/* Phone & Email */}
-              <div className="p-8 rounded-[2.5rem] bg-white border border-brand-neutral-border shadow-soft space-y-5">
+              <div className="p-8 rounded-[2rem] bg-white border border-stone-200/80 shadow-soft space-y-5">
                 <div className="space-y-1">
-                  <span className="text-xs uppercase font-semibold text-brand-blue-700 tracking-wider block">
+                  <span className="text-xs uppercase font-fredoka font-semibold text-sky-700 tracking-wider block">
                     Phone Inquiries
                   </span>
                   <a
                     href={`tel:${schoolContact.contact.phone.replace(/\s+/g, "")}`}
-                    className="font-display font-bold text-2xl text-brand-neutral-charcoal hover:text-brand-green-700 transition-colors block"
+                    className="font-fredoka font-bold text-2xl text-brand-neutral-charcoal hover:text-emerald-700 transition-colors block"
                   >
                     {schoolContact.contact.phone}
                   </a>
-                  <p className="text-xs text-brand-neutral-slate">
+                  <p className="text-xs text-brand-neutral-slate font-nunito">
                     Mon–Sat: {schoolContact.contact.hours}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-brand-neutral-border/60 space-y-1">
-                  <span className="text-xs uppercase font-semibold text-brand-green-700 tracking-wider block">
+                <div className="pt-4 border-t border-stone-100 space-y-1">
+                  <span className="text-xs uppercase font-fredoka font-semibold text-emerald-700 tracking-wider block">
                     Email Correspondence
                   </span>
                   <a
                     href={`mailto:${schoolContact.contact.email}`}
-                    className="text-base font-semibold text-brand-neutral-charcoal hover:text-brand-green-700 transition-colors break-all block"
+                    className="text-base font-semibold text-brand-neutral-charcoal font-nunito hover:text-emerald-700 transition-colors break-all block"
                   >
                     {schoolContact.contact.email}
                   </a>
                 </div>
 
-                <div className="pt-4 border-t border-brand-neutral-border/60 space-y-2">
-                  <span className="text-xs uppercase font-semibold text-brand-neutral-slate tracking-wider block">
+                <div className="pt-4 border-t border-stone-100 space-y-2">
+                  <span className="text-xs uppercase font-fredoka font-semibold text-brand-neutral-slate tracking-wider block">
                     Connect on Social Platforms
                   </span>
                   <div className="flex items-center gap-3">
@@ -109,7 +109,7 @@ export default function ContactPage() {
                       href={schoolContact.social.facebook.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-brand-neutral-ivory hover:bg-brand-green-100 text-brand-neutral-charcoal hover:text-brand-green-800 transition-colors"
+                      className="p-3 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-900 transition-colors border border-amber-200"
                       aria-label="Facebook"
                     >
                       <FacebookIcon className="w-4 h-4" />
@@ -118,7 +118,7 @@ export default function ContactPage() {
                       href={schoolContact.social.youtube.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-brand-neutral-ivory hover:bg-brand-green-100 text-brand-neutral-charcoal hover:text-brand-green-800 transition-colors"
+                      className="p-3 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-900 transition-colors border border-rose-200"
                       aria-label="YouTube"
                     >
                       <YoutubeIcon className="w-4 h-4" />
@@ -127,7 +127,7 @@ export default function ContactPage() {
                       href={schoolContact.social.instagram.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-brand-neutral-ivory hover:bg-brand-green-100 text-brand-neutral-charcoal hover:text-brand-green-800 transition-colors"
+                      className="p-3 rounded-full bg-purple-50 hover:bg-purple-100 text-purple-900 transition-colors border border-purple-200"
                       aria-label="Instagram"
                     >
                       <InstagramIcon className="w-4 h-4" />

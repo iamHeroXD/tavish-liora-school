@@ -53,10 +53,10 @@ export default function GalleryView() {
                 setActiveCategory(category);
                 setSelectedImageIndex(null);
               }}
-              className={`px-5 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
+              className={`px-6 py-2.5 rounded-full text-xs sm:text-sm font-fredoka font-bold tracking-wide transition-all duration-200 ${
                 isActive
-                  ? "bg-brand-green-700 text-white shadow-soft"
-                  : "bg-white text-brand-neutral-graphite hover:bg-brand-neutral-ivory border border-brand-neutral-border"
+                  ? "bg-amber-400 text-amber-950 shadow-soft scale-105"
+                  : "bg-white text-brand-neutral-graphite hover:bg-amber-50/50 border border-stone-200"
               }`}
             >
               {category}
@@ -71,7 +71,7 @@ export default function GalleryView() {
           <div
             key={item.id}
             onClick={() => setSelectedImageIndex(index)}
-            className="group relative rounded-3xl overflow-hidden bg-white border border-brand-neutral-border shadow-soft hover:shadow-card cursor-pointer transition-all duration-300 transform hover:-translate-y-1"
+            className="group relative rounded-3xl overflow-hidden bg-white border border-stone-200/80 shadow-soft hover:shadow-card cursor-pointer transition-all duration-300 transform hover:-translate-y-1"
           >
             <div
               className={`relative w-full overflow-hidden bg-brand-neutral-ivory ${
@@ -93,16 +93,16 @@ export default function GalleryView() {
             </div>
 
             {/* Always visible label strip */}
-            <div className="p-4 sm:p-5 flex items-center justify-between border-t border-brand-neutral-border/60">
+            <div className="p-4 sm:p-5 flex items-center justify-between border-t border-stone-100">
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-brand-green-700">
+                <span className="text-[10px] font-fredoka font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100">
                   {item.category}
                 </span>
-                <h3 className="font-display font-semibold text-base text-brand-neutral-charcoal mt-0.5">
+                <h3 className="font-fredoka font-bold text-base text-brand-neutral-charcoal mt-1.5">
                   {item.title}
                 </h3>
               </div>
-              <div className="w-8 h-8 rounded-full bg-brand-green-50 text-brand-green-700 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="w-9 h-9 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                 <Eye className="w-4 h-4" />
               </div>
             </div>
@@ -157,16 +157,16 @@ export default function GalleryView() {
             </div>
 
             <div className="mt-4 text-center max-w-xl text-white space-y-1.5 px-4">
-              <span className="text-xs uppercase font-semibold text-brand-green-300">
+              <span className="text-xs uppercase font-fredoka font-semibold text-amber-300">
                 {currentItem.category} · {selectedImageIndex! + 1} of {filteredItems.length}
               </span>
-              <h3 className="font-display font-bold text-xl sm:text-2xl text-white">
+              <h3 className="font-fredoka font-bold text-xl sm:text-2xl text-white">
                 {currentItem.title}
               </h3>
-              <p className="text-sm text-white/80">
+              <p className="text-sm font-nunito text-white/90">
                 {currentItem.caption}
               </p>
-              <p className="text-[11px] text-white/50 italic pt-1">
+              <p className="text-[11px] font-nunito text-white/60 italic pt-1">
                 {currentItem.sourceNote}
               </p>
             </div>

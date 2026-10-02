@@ -12,26 +12,26 @@ export default function CampusSpaces() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="space-y-3 max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-green-100 text-brand-green-900 text-xs font-semibold tracking-wider uppercase">
-              <Trees className="w-3.5 h-3.5 text-brand-green-600" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-fredoka font-semibold tracking-wider uppercase border border-emerald-200">
+              <Trees className="w-3.5 h-3.5 text-emerald-600" />
               <span>CAMPUS ENVIRONMENT</span>
             </div>
             <h2
               id="spaces-heading"
-              className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-neutral-charcoal tracking-tight"
+              className="font-fredoka text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-neutral-charcoal tracking-tight"
             >
-              Spaces that invite curiosity.
+              Spaces that invite <span className="text-emerald-600">curiosity</span> & <span className="text-amber-500">play</span>.
             </h2>
-            <p className="text-brand-neutral-slate text-base sm:text-lg">
+            <p className="text-brand-neutral-slate text-base sm:text-lg font-nunito leading-relaxed">
               Set amidst trees and open sky in Melamcode, our campus is curated for children to move freely, breathe naturally, and engage all five senses.
             </p>
           </div>
 
           <Link
             href="/gallery"
-            className="group inline-flex items-center gap-2 text-sm font-semibold text-brand-green-700 hover:text-brand-green-800 transition-colors"
+            className="group inline-flex items-center gap-2 text-sm font-fredoka font-bold text-emerald-700 hover:text-emerald-800 transition-colors"
           >
-            <span>Explore full gallery & lightbox</span>
+            <span>Explore full photo gallery</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
@@ -55,14 +55,14 @@ export default function CampusSpaces() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 text-white space-y-1">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-semibold mb-2">
-                <Trees className="w-3.5 h-3.5 text-brand-green-300" />
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/90 text-white backdrop-blur-md text-xs font-fredoka font-semibold mb-2 border border-emerald-300">
+                <Trees className="w-3.5 h-3.5 text-emerald-100" />
                 <span>Green Garden Courtyard</span>
               </div>
-              <h3 className="font-display font-semibold text-xl sm:text-2xl text-white">
+              <h3 className="font-fredoka font-bold text-xl sm:text-2xl text-white">
                 Sunlit Open-Air Pathways & Tropical Shade
               </h3>
-              <p className="text-xs sm:text-sm text-white/80 max-w-md">
+              <p className="text-xs sm:text-sm text-white/90 font-nunito max-w-md leading-relaxed">
                 Gentle breezes, birdsong, and natural stone walkways allowing young children to run, observe butterflies, and feel connected to the earth.
               </p>
             </div>

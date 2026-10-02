@@ -13,15 +13,15 @@ export default function SocialWorld() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div className="space-y-3 max-w-xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-blue-50 text-brand-blue-700 text-xs font-semibold tracking-wider uppercase">
-              <InstagramIcon className="w-3.5 h-3.5 text-brand-blue-500" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-50 text-sky-800 text-xs font-fredoka font-semibold tracking-wider uppercase border border-sky-200">
+              <InstagramIcon className="w-3.5 h-3.5 text-sky-600" />
               <span>FROM OUR SCHOOL WORLD</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-neutral-charcoal tracking-tight">
-              Glimpses of life at Tavish Liora.
+            <h2 className="font-fredoka text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-neutral-charcoal tracking-tight">
+              Glimpses of life at <span className="text-amber-500">Tavish</span> <span className="text-emerald-600">Liora</span>.
             </h2>
-            <p className="text-brand-neutral-slate text-sm sm:text-base">
-              Moments from our classroom experiments, eco-farm excursions, and festive school celebrations.
+            <p className="text-brand-neutral-slate text-sm sm:text-base font-nunito leading-relaxed">
+              Moments from our classroom experiments, eco-farm excursions, and festive school celebrations in Melamcode.
             </p>
           </div>
 
@@ -30,7 +30,7 @@ export default function SocialWorld() {
               href={schoolContact.social.instagram.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 hover:opacity-95 shadow-sm transition-all group"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm font-fredoka font-bold text-white bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:opacity-95 shadow-soft transition-all group"
             >
               <InstagramIcon className="w-4 h-4" />
               <span>Follow @tavishlioracentralschool</span>
@@ -63,14 +63,14 @@ export default function SocialWorld() {
             </div>
 
             <div className="relative z-10 space-y-2 text-white">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-semibold text-brand-green-300">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/90 backdrop-blur-md text-xs font-fredoka font-semibold text-white border border-emerald-300">
                 <Sparkles className="w-3 h-3" />
                 Featured Video Highlight
               </span>
-              <h3 className="font-display font-semibold text-xl leading-snug">
+              <h3 className="font-fredoka font-bold text-xl leading-snug">
                 Little Scientists & STEM Discovery Day
               </h3>
-              <p className="text-xs text-white/80 line-clamp-2">
+              <p className="text-xs text-white/90 font-nunito line-clamp-2">
                 Young inquisitive minds testing plant sprouts, learning robotic logic, and celebrating their discoveries in Melamcode.
               </p>
             </div>
@@ -96,13 +96,13 @@ export default function SocialWorld() {
                 />
               </div>
               <div className="space-y-1">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2 py-0.5 rounded-md">
+                <span className="text-[10px] font-fredoka font-bold uppercase tracking-wider text-amber-700 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200">
                   Math Fun Mania
                 </span>
-                <h4 className="font-display font-semibold text-sm text-brand-neutral-charcoal">
+                <h4 className="font-fredoka font-bold text-sm text-brand-neutral-charcoal">
                   Puzzles, Tangrams & Geometry Play
                 </h4>
-                <p className="text-xs text-brand-neutral-slate line-clamp-1">
+                <p className="text-xs text-brand-neutral-slate font-nunito line-clamp-1">
                   Making mathematics tangible and joyous.
                 </p>
               </div>
@@ -114,7 +114,7 @@ export default function SocialWorld() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="p-5 rounded-3xl bg-white border border-brand-neutral-border shadow-soft flex gap-4 items-center group"
+              className="p-5 rounded-3xl bg-white border border-stone-200/80 shadow-soft flex gap-4 items-center group"
             >
               <div className="relative w-20 h-20 rounded-2xl overflow-hidden flex-shrink-0">
                 <Image
@@ -126,13 +126,13 @@ export default function SocialWorld() {
                 />
               </div>
               <div className="space-y-1">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-brand-green-700 bg-brand-green-50 px-2 py-0.5 rounded-md">
+                <span className="text-[10px] font-fredoka font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
                   Sports Meet
                 </span>
-                <h4 className="font-display font-semibold text-sm text-brand-neutral-charcoal">
+                <h4 className="font-fredoka font-bold text-sm text-brand-neutral-charcoal">
                   Joyous Athletic Relays & Camaraderie
                 </h4>
-                <p className="text-xs text-brand-neutral-slate line-clamp-1">
+                <p className="text-xs text-brand-neutral-slate font-nunito line-clamp-1">
                   Running barefoot on the green lawn under palm shade.
                 </p>
               </div>
@@ -145,20 +145,20 @@ export default function SocialWorld() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="md:col-span-3 p-7 rounded-[2.5rem] bg-gradient-to-br from-brand-green-800 to-brand-green-950 text-white shadow-soft flex flex-col justify-between"
+            className="md:col-span-3 p-7 rounded-[2.5rem] bg-gradient-to-br from-emerald-800 to-teal-950 text-white shadow-soft flex flex-col justify-between"
           >
             <div className="space-y-4">
-              <div className="flex items-center justify-between text-brand-green-300">
-                <span className="font-script text-xl">Parent & School Heart</span>
-                <Heart className="w-4 h-4 fill-brand-green-400 text-brand-green-400" />
+              <div className="flex items-center justify-between text-emerald-300">
+                <span className="font-fredoka font-bold text-lg">Parent & School Heart</span>
+                <Heart className="w-5 h-5 fill-rose-400 text-rose-400" />
               </div>
-              <p className="font-display text-base italic leading-relaxed text-white/95">
-                “Every child carries an innate spark. In our Melamcode garden, we give that spark the soil, sunlight, and encouragement to catch fire.”
+              <p className="font-fredoka text-lg font-medium leading-relaxed text-white/95">
+                “Every child carries an innate spark. In our Melamcode garden, we give that spark the soil, sunlight, and encouragement to blossom.”
               </p>
             </div>
 
-            <div className="pt-6 border-t border-white/10 text-xs text-brand-green-200/80">
-              <span className="block font-semibold text-white">Tavish Liora Central School</span>
+            <div className="pt-6 border-t border-white/15 text-xs text-emerald-200/90 font-nunito">
+              <span className="block font-fredoka font-bold text-white text-sm">Tavish Liora Central School</span>
               <span>Melamcode, Nemom P.O.</span>
             </div>
           </motion.div>

@@ -36,17 +36,17 @@ export default function LearningWorld() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-green-100 text-brand-green-900 text-xs font-semibold tracking-wider uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-brand-green-600" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-fredoka font-semibold tracking-wider uppercase border border-emerald-200">
+            <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
             <span>INTERACTIVE DISCOVERY BOOK</span>
           </div>
           <h2
             id="learning-heading"
-            className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-neutral-charcoal tracking-tight"
+            className="font-fredoka text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-neutral-charcoal tracking-tight"
           >
-            How learning unfolds at Tavish Liora.
+            How <span className="text-amber-500">learning</span> unfolds at <span className="text-emerald-600">Tavish</span> <span className="text-sky-600">Liora</span>.
           </h2>
-          <p className="text-brand-neutral-slate text-base sm:text-lg">
+          <p className="text-brand-neutral-slate text-base sm:text-lg font-nunito leading-relaxed">
             Rather than silent textbook drills, learning here is experiential—tasting the joy of science, numbers, colors, body movement, and voice.
           </p>
         </div>
@@ -62,36 +62,36 @@ export default function LearningWorld() {
                   key={pillar.id}
                   onClick={() => setActivePillarId(pillar.id)}
                   type="button"
-                  className={`text-left p-4 sm:p-5 rounded-3xl transition-all duration-300 relative border ${
+                  className={`text-left p-4 sm:p-5 rounded-2xl transition-all duration-300 relative border ${
                     isSelected
-                      ? "bg-white border-brand-green-300 shadow-soft translate-x-1 sm:translate-x-2"
-                      : "bg-white/60 hover:bg-white border-transparent text-brand-neutral-graphite hover:border-brand-neutral-border"
+                      ? "bg-white border-amber-300 shadow-card translate-x-1 sm:translate-x-2 ring-2 ring-amber-100"
+                      : "bg-white/70 hover:bg-white border-stone-200/60 text-brand-neutral-graphite hover:border-amber-200"
                   }`}
                   aria-pressed={isSelected}
                 >
                   <div className="flex items-center justify-between gap-3">
                     <div className="flex items-center gap-3">
                       <div
-                        className={`w-9 h-9 rounded-2xl flex items-center justify-center transition-colors ${
+                        className={`w-10 h-10 rounded-2xl flex items-center justify-center transition-colors ${
                           isSelected
-                            ? "bg-brand-green-600 text-white shadow-sm"
-                            : "bg-brand-neutral-ivory text-brand-neutral-slate"
+                            ? "bg-amber-400 text-amber-950 shadow-sm"
+                            : "bg-emerald-50 text-emerald-700"
                         }`}
                       >
                         {ICONS[pillar.iconName]}
                       </div>
                       <div>
-                        <h3 className="font-display font-semibold text-base sm:text-lg text-brand-neutral-charcoal leading-tight">
+                        <h3 className="font-fredoka font-bold text-base sm:text-lg text-brand-neutral-charcoal leading-tight">
                           {pillar.title}
                         </h3>
-                        <p className="text-xs text-brand-neutral-slate font-medium mt-0.5">
+                        <p className="text-xs text-brand-neutral-slate font-nunito mt-0.5">
                           {pillar.theme}
                         </p>
                       </div>
                     </div>
 
                     {isSelected && (
-                      <span className="w-2.5 h-2.5 rounded-full bg-brand-green-500 flex-shrink-0 animate-pulse" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-amber-500 flex-shrink-0 animate-ping" />
                     )}
                   </div>
                 </button>
@@ -108,11 +108,11 @@ export default function LearningWorld() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -16 }}
                 transition={{ duration: 0.35, ease: "easeOut" }}
-                className="h-full bg-white rounded-[2.5rem] border border-brand-neutral-border shadow-card p-6 sm:p-10 flex flex-col justify-between overflow-hidden relative"
+                className="h-full bg-white rounded-[2.5rem] border border-amber-100 shadow-card p-6 sm:p-10 flex flex-col justify-between overflow-hidden relative"
               >
                 {/* Visual Top Half */}
                 <div className="space-y-6">
-                  <div className="relative w-full aspect-[16/9] sm:aspect-[2/1] rounded-3xl overflow-hidden border border-brand-neutral-border/80 shadow-inner">
+                  <div className="relative w-full aspect-[16/9] sm:aspect-[2/1] rounded-3xl overflow-hidden border-2 border-amber-100 shadow-inner">
                     <Image
                       src={PILLAR_IMAGES[activePillar.id] || "/photos/art-studio.jpg"}
                       alt={activePillar.title}
@@ -122,10 +122,10 @@ export default function LearningWorld() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
-                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-sm border border-white/20">
+                      <span className="text-xs font-fredoka font-semibold px-3 py-1 rounded-full bg-amber-500/90 text-white backdrop-blur-sm border border-amber-300">
                         {activePillar.theme}
                       </span>
-                      <span className="text-[11px] font-medium text-white/80">
+                      <span className="text-[11px] font-nunito text-white/90">
                         Tavish Liora Learning Experience
                       </span>
                     </div>
@@ -133,27 +133,27 @@ export default function LearningWorld() {
 
                   {/* Descriptive Narrative */}
                   <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-xs font-semibold text-brand-green-700">
-                      <CheckCircle2 className="w-4 h-4 text-brand-green-600" />
+                    <div className="flex items-center gap-2 text-xs font-fredoka font-semibold text-emerald-700">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                       <span>{activePillar.verifiedSource}</span>
                     </div>
-                    <h3 className="font-display font-bold text-2xl sm:text-3xl text-brand-neutral-charcoal">
+                    <h3 className="font-fredoka font-bold text-2xl sm:text-3xl text-brand-neutral-charcoal">
                       {activePillar.title}
                     </h3>
-                    <p className="text-base text-brand-neutral-graphite leading-relaxed">
+                    <p className="text-base text-brand-neutral-graphite font-nunito leading-relaxed">
                       {activePillar.fullDesc}
                     </p>
                   </div>
                 </div>
 
                 {/* Bottom Action */}
-                <div className="pt-6 mt-6 border-t border-brand-neutral-border/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <div className="text-xs text-brand-neutral-slate">
+                <div className="pt-6 mt-6 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <div className="text-xs text-brand-neutral-slate font-nunito">
                     <span>Part of our child-centered early childhood curriculum</span>
                   </div>
                   <Link
                     href="/learning"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-brand-green-700 hover:text-brand-green-800 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-fredoka font-bold text-emerald-700 hover:text-emerald-800 transition-colors"
                   >
                     <span>View all learning programs</span>
                     <ArrowRight className="w-4 h-4" />

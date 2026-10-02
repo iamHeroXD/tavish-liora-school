@@ -61,11 +61,11 @@ export default function EnquiryForm() {
       onSubmit={handleSubmit}
       className="p-6 sm:p-10 rounded-[2.5rem] bg-white border border-brand-neutral-border shadow-card space-y-5"
     >
-      <div className="space-y-1 pb-2 border-b border-brand-neutral-border/60">
-        <h3 className="font-display font-bold text-xl sm:text-2xl text-brand-neutral-charcoal">
+      <div className="space-y-1 pb-3 border-b border-stone-200/80">
+        <h3 className="font-fredoka font-bold text-2xl text-brand-neutral-charcoal">
           Admissions Enquiry
         </h3>
-        <p className="text-xs sm:text-sm text-brand-neutral-slate">
+        <p className="text-xs sm:text-sm text-brand-neutral-slate font-nunito">
           Connect directly with our admissions desk in Melamcode, Nemom.
         </p>
       </div>
@@ -73,7 +73,7 @@ export default function EnquiryForm() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Parent Name */}
         <div className="space-y-1.5">
-          <label className="text-xs font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
+          <label className="text-xs font-fredoka font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
             Parent / Guardian Name *
           </label>
           <input
@@ -82,13 +82,13 @@ export default function EnquiryForm() {
             value={formData.parentName}
             onChange={(e) => setFormData({ ...formData, parentName: e.target.value })}
             placeholder="e.g. Anjali Nair"
-            className="w-full px-4 py-3 rounded-2xl bg-brand-neutral-lightest border border-brand-neutral-border text-sm text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-brand-green-500/30 focus:border-brand-green-500 transition-all"
+            className="w-full px-4 py-3 rounded-2xl bg-amber-50/30 border border-stone-200 text-sm font-nunito text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400 transition-all"
           />
         </div>
 
         {/* Child Name */}
         <div className="space-y-1.5">
-          <label className="text-xs font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
+          <label className="text-xs font-fredoka font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
             Child&apos;s Name *
           </label>
           <input
@@ -97,20 +97,20 @@ export default function EnquiryForm() {
             value={formData.childName}
             onChange={(e) => setFormData({ ...formData, childName: e.target.value })}
             placeholder="e.g. Aarav"
-            className="w-full px-4 py-3 rounded-2xl bg-brand-neutral-lightest border border-brand-neutral-border text-sm text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-brand-green-500/30 focus:border-brand-green-500 transition-all"
+            className="w-full px-4 py-3 rounded-2xl bg-amber-50/30 border border-stone-200 text-sm font-nunito text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400 transition-all"
           />
         </div>
 
         {/* Child Age / Grade of Interest */}
         <div className="space-y-1.5">
-          <label className="text-xs font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
+          <label className="text-xs font-fredoka font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
             Age / Grade of Interest *
           </label>
           <select
             required
             value={formData.ageGrade}
             onChange={(e) => setFormData({ ...formData, ageGrade: e.target.value })}
-            className="w-full px-4 py-3 rounded-2xl bg-brand-neutral-lightest border border-brand-neutral-border text-sm text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-brand-green-500/30 focus:border-brand-green-500 transition-all"
+            className="w-full px-4 py-3 rounded-2xl bg-amber-50/30 border border-stone-200 text-sm font-nunito text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400 transition-all"
           >
             <option value="">Select Level</option>
             <option value="Pre-KG / Play (Age 2.5 - 3.5)">Pre-KG / Play (Age 2.5 - 3.5)</option>
@@ -123,7 +123,7 @@ export default function EnquiryForm() {
 
         {/* Phone Number */}
         <div className="space-y-1.5">
-          <label className="text-xs font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
+          <label className="text-xs font-fredoka font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
             Contact Phone Number *
           </label>
           <input
@@ -132,14 +132,14 @@ export default function EnquiryForm() {
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
             placeholder="e.g. +91 94976 92852"
-            className="w-full px-4 py-3 rounded-2xl bg-brand-neutral-lightest border border-brand-neutral-border text-sm text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-brand-green-500/30 focus:border-brand-green-500 transition-all"
+            className="w-full px-4 py-3 rounded-2xl bg-amber-50/30 border border-stone-200 text-sm font-nunito text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400 transition-all"
           />
         </div>
       </div>
 
       {/* Email */}
       <div className="space-y-1.5">
-        <label className="text-xs font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
+        <label className="text-xs font-fredoka font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
           Email Address
         </label>
         <input
@@ -147,13 +147,13 @@ export default function EnquiryForm() {
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           placeholder="e.g. parent@example.com"
-          className="w-full px-4 py-3 rounded-2xl bg-brand-neutral-lightest border border-brand-neutral-border text-sm text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-brand-green-500/30 focus:border-brand-green-500 transition-all"
+          className="w-full px-4 py-3 rounded-2xl bg-amber-50/30 border border-stone-200 text-sm font-nunito text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400 transition-all"
         />
       </div>
 
       {/* Message / Specific Questions */}
       <div className="space-y-1.5">
-        <label className="text-xs font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
+        <label className="text-xs font-fredoka font-semibold text-brand-neutral-graphite uppercase tracking-wider block">
           Any questions or notes for the educators?
         </label>
         <textarea
@@ -161,13 +161,13 @@ export default function EnquiryForm() {
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           placeholder="Tell us about your child's personality, favorite activities, or any questions regarding school timings/transport."
-          className="w-full px-4 py-3 rounded-2xl bg-brand-neutral-lightest border border-brand-neutral-border text-sm text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-brand-green-500/30 focus:border-brand-green-500 transition-all resize-none"
+          className="w-full px-4 py-3 rounded-2xl bg-amber-50/30 border border-stone-200 text-sm font-nunito text-brand-neutral-charcoal focus:outline-none focus:ring-2 focus:ring-amber-400/30 focus:border-amber-400 transition-all resize-none"
         />
       </div>
 
       {/* Privacy Guarantee Note */}
-      <div className="flex items-start gap-2.5 text-xs text-brand-neutral-slate pt-1">
-        <ShieldCheck className="w-4 h-4 text-brand-green-600 flex-shrink-0 mt-0.5" />
+      <div className="flex items-start gap-2.5 text-xs text-brand-neutral-slate font-nunito pt-1">
+        <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0 mt-0.5" />
         <span>
           Your privacy matters. Information submitted is handled strictly by Tavish Liora Central School admissions and never shared.
         </span>
@@ -177,7 +177,7 @@ export default function EnquiryForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full py-4 rounded-2xl text-sm sm:text-base font-semibold text-white bg-brand-green-600 hover:bg-brand-green-700 shadow-soft hover:shadow-card transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-75 cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0"
+        className="w-full py-4 rounded-full text-base font-fredoka font-bold tracking-wide text-white bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 shadow-soft hover:shadow-card transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-75 cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0"
       >
         {isSubmitting ? (
           <>
@@ -186,7 +186,7 @@ export default function EnquiryForm() {
           </>
         ) : (
           <>
-            <span>Submit Admissions Enquiry</span>
+            <span>SUBMIT ADMISSIONS ENQUIRY</span>
             <Send className="w-4 h-4" />
           </>
         )}
